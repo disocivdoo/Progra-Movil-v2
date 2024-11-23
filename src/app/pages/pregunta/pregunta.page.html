@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div style="display: flex; justify-content: center; margin-top: 20px;">
+    <ion-card style="max-width: 400px; width: 100%; padding: 20px;">
+      <ion-card-header>
+        <h1 style="text-align: center;">Sistema de asistencia Duoc</h1>
+        <ion-card-title style="text-align: center;">Pregunta secreta</ion-card-title>
+        <p style="text-align: center;">{{usuario.secretQuestion}}</p>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-input 
+            [(ngModel)]="respuesta" 
+            label="Conteste la respuesta" 
+            labelPlacement="floating" 
+            placeholder="Ej: atorres">
+          </ion-input>
+        </ion-item>
+
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+          <ion-button shape="round" (click)="enviarRespuesta()" style="width: 100%;">
+            Responder
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="/login">Iniciar sesión</a>
+  </div>
+</ion-content>

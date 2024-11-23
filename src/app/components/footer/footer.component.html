@@ -1,0 +1,27 @@
+<ion-footer class="custom-footer">
+  <ion-toolbar color="primary" class="custom-toolbar">
+    <ion-segment value="welcome" (ionChange)="sendClickEvent($event)" [(ngModel)]="selectedButton"
+      class="custom-segment">
+      <ion-segment-button value="home" class="custom-segment-button">
+        <ion-icon name="home-outline"></ion-icon>
+        {{ "HomePage.Button.Inicio" | translate }}
+      </ion-segment-button>
+
+      <ion-segment-button value="miclase" class="custom-segment-button">
+        <ion-icon name="book-outline"></ion-icon>
+        {{ "HomePage.Button.MiClase" | translate }}
+      </ion-segment-button>
+
+      <ion-segment-button value="misdatos" class="custom-segment-button">
+        <ion-icon name="person-outline"></ion-icon>
+        {{ "HomePage.Button.MisDatos" | translate }}
+      </ion-segment-button>
+
+      <ion-segment-button value="forum" class="custom-segment-button">
+        <ion-icon name="chatbubbles-outline"></ion-icon>
+        {{ "HomePage.Button.Foro" | translate }}
+      </ion-segment-button>
+
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>

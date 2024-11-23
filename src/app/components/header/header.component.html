@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-img src="../../../assets/img/logo_duoc_white.png" slot="start" style="width: 150px; margin-left: 20px;">
+    </ion-img>
+
+    <div slot="end">
+      <ion-button (click)="sendClickEvent('scan')" size="small" fill="clear">
+        <ion-icon name="qr-code-outline" color="light"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="logout()" size="small" fill="clear">
+        <ion-icon name="log-out-outline" color="light"></ion-icon>
+      </ion-button>
+
+    </div>
+  </ion-toolbar>
+</ion-header>

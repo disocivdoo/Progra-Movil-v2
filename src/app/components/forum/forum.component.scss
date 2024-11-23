@@ -1,0 +1,115 @@
+/* CSS del componente para gestión de publicaciones */
+
+ion-content {
+  --background: #000000;
+  color: #ffffff;
+}
+
+ion-card {
+  --background: #1e1e1e;
+  --color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 16px;
+}
+
+/* Estilos específicos para el ion-input y el ion-textarea */
+ion-input,
+ion-textarea {
+  --background: #2e2e2e !important; /* Fuerza el fondo oscuro */
+  --color: #ffffff !important; /* Fuerza el color del texto en blanco */
+  border: 1px solid #3a3a3a !important;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+ion-input::part(native),
+ion-textarea::part(native) {
+  background-color: #2e2e2e !important;
+  color: #ffffff !important;
+}
+
+/* Otros estilos existentes */
+ion-card-header h4,
+ion-card-header h6 {
+  color: #d1d1d1;
+}
+
+ion-card-title {
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+ion-card-subtitle {
+  color: #a0a0a0;
+  font-size: 1rem;
+}
+
+ion-label {
+  color: #b3b3b3;
+}
+
+ion-button {
+  font-weight: bold;
+}
+
+ion-button[color="primary"] {
+  --background: #0d6efd;
+  --background-hover: #0b5ed7;
+}
+
+ion-button[color="medium"] {
+  --background: #6c757d;
+  --background-hover: #5a6268;
+}
+
+ion-card-title.con-padding-top {
+  padding-top: 16px;
+}
+
+ion-list {
+  padding-top: 0;
+}
+
+ion-fab-button {
+  --background: #212529;
+  --background-activated: #343a40;
+}
+
+ion-fab-button[color="primary"] {
+  --background: #0d6efd;
+}
+
+ion-fab-button[color="danger"] {
+  --background: #dc3545;
+}
+
+ion-icon {
+  color: #ffffff;
+}
+
+.ion-text-center {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.margin-top-6 {
+  margin-top: 16px !important;
+}
+
+/* CSS para ion-input y ion-textarea */
+ion-input,
+ion-textarea {
+  --background: #2e2e2e !important; /* Fondo oscuro */
+  --color: #ffffff !important; /* Color del texto en blanco */
+  border: 1px solid #3a3a3a;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+
+.custom-item {
+  --background: 1e1e1e;
+  --color: 1e1e1e;
+}

@@ -1,0 +1,62 @@
+<ion-content class="ion-padding">
+  <img alt="DUOC" src="../../../assets/img/Fachada-Palacio-Íñiguez-e1578666996857.jpg" class="fullscreen-image" />
+  <div class="center-container">
+    <ion-card style="text-align: center;">
+      <app-qrwebscanner (scanned)="onQrScanned($event)" (stopped)="onQrStopped()">
+      </app-qrwebscanner>
+
+      <h1 style="margin-top: 20px; font-size: 30px">Datos de la <br>Asignatura</h1>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col><strong>Sede:</strong></ion-col>
+          <ion-col>{{ sede }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><strong>ID Asignatura:</strong></ion-col>
+          <ion-col>{{ idAsignatura }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><strong>Sección:</strong></ion-col>
+          <ion-col>{{ seccion }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><strong>Nombre Asignatura:</strong></ion-col>
+          <ion-col>{{ nombreAsignatura }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><strong>Nombre Profesor:</strong></ion-col>
+          <ion-col>{{ nombreProfesor }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><strong>Día:</strong></ion-col>
+          <ion-col>{{ dia }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><strong>Bloque Inicio:</strong></ion-col>
+          <ion-col>{{ bloqueInicio }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><strong>Bloque Término:</strong></ion-col>
+          <ion-col>{{ bloqueTermino }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><strong>Hora Inicio:</strong></ion-col>
+          <ion-col>{{ horaInicio }}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><strong>Hora Fin:</strong></ion-col>
+          <ion-col>{{ horaFin }}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer
+  style="display: flex; justify-content: center; align-items: center; padding-bottom: 20px; padding-top: 20px;">
+  <ion-button shape="round" (click)="navegarSinDatos('/login')" class="Cerrar">
+    <ion-icon slot="start" name="log-out"></ion-icon>
+    Cerrar Sesión
+  </ion-button>
+</ion-footer>

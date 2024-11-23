@@ -1,0 +1,17 @@
+<ion-content class="ion-padding-horizontal full-page" fullscreen>
+  <div class="card-container">
+    <ion-card class="full-card">
+      <ion-text class="ion-text-center">
+        <h2>Sistema de Asistencia DUOC</h2>
+      </ion-text>
+
+      <div class="image-container">
+        <img src="../../../assets/img/Ok-bro.png" alt="Chica con pulgar arriba" class="main-image">
+        <div class="password-text">
+          <p>Tu contraseña es <strong>{{usuario.password}}</strong></p>
+        </div>
+      </div>
+      <ion-button shape="round" expand="full" color="primary" (click)="navegarSinDatos('/login')" >Iniciar sesión</ion-button>
+    </ion-card>
+  </div>
+</ion-content>

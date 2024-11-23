@@ -1,0 +1,95 @@
+<ion-content padding>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <!-- Sección de Datos Personales -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Registrarse</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- Nombre de Usuario -->
+        <ion-item>
+          <ion-label position="floating">Nombre de Usuario</ion-label>
+          <ion-input formControlName="userName" type="text" required></ion-input>
+        </ion-item>
+
+        <!-- Correo Electrónico -->
+        <ion-item>
+          <ion-label position="floating">Correo Electrónico</ion-label>
+          <ion-input formControlName="email" type="email" required></ion-input>
+        </ion-item>
+
+        <!-- Contraseña -->
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password" required></ion-input>
+        </ion-item>
+
+        <!-- Confirmar Contraseña -->
+        <ion-item>
+          <ion-label position="floating">Confirmar Contraseña</ion-label>
+          <ion-input formControlName="confirmPassword" type="password" required></ion-input>
+        </ion-item>
+
+        <!-- Pregunta de Seguridad -->
+        <ion-item>
+          <ion-label position="floating">Pregunta de Seguridad</ion-label>
+          <ion-input formControlName="secretQuestion" type="text" required></ion-input>
+        </ion-item>
+
+        <!-- Respuesta de Seguridad -->
+        <ion-item>
+          <ion-label position="floating">Respuesta de Seguridad</ion-label>
+          <ion-input formControlName="secretAnswer" type="text" required></ion-input>
+        </ion-item>
+
+        <!-- Nombre -->
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="firstName" type="text" required></ion-input>
+        </ion-item>
+
+        <!-- Apellido -->
+        <ion-item>
+          <ion-label position="floating">Apellido</ion-label>
+          <ion-input formControlName="lastName" type="text" required></ion-input>
+        </ion-item>
+
+        <!-- Nivel Educativo -->
+        <ion-item>
+          <ion-label position="floating">Nivel Educativo</ion-label>
+          <ion-select formControlName="educationalLevel" required>
+            <ion-select-option *ngFor="let level of educationalLevels" [value]="level.id">
+              {{ level.name }}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- Fecha de Nacimiento -->
+        <ion-item>
+          <ion-label position="floating">Fecha de Nacimiento</ion-label>
+          <ion-input formControlName="dateOfBirth" type="date" required></ion-input>
+        </ion-item>
+
+        <!-- Dirección -->
+        <ion-item>
+          <ion-label position="floating">Dirección</ion-label>
+          <ion-input formControlName="address" type="text" required></ion-input>
+        </ion-item>
+
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Botón de Registrarse -->
+    <ion-button expand="block" type="submit" [disabled]="!registerForm.valid">
+      Registrarse
+    </ion-button>
+
+  </form>
+
+  <!-- Botón de Volver al Login (opcional) -->
+  <div class="button-container">
+    <ion-button expand="block" color="light" routerLink="/login">
+      Volver al Login
+    </ion-button>
+  </div>
+</ion-content>

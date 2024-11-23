@@ -1,0 +1,106 @@
+/* General para el tema oscuro */
+ion-content {
+  --background: #121212; /* Fondo oscuro */
+}
+
+/* Contenedor central */
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+
+/* Estilo para la tarjeta */
+.card {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+  background-color: #1e1e1e; /* Fondo oscuro para la tarjeta */
+}
+
+/* Título de la tarjeta */
+.card-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff; /* Texto blanco */
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Subtítulo de la tarjeta */
+.card-subtitle {
+  font-size: 18px;
+  color: #b0b0b0; /* Texto gris claro */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Paso de la tarjeta */
+.card-step {
+  font-size: 14px;
+  color: #888888; /* Texto gris más oscuro */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo para los input */
+ion-item {
+  margin: 10px 0;
+}
+
+ion-input {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --box-shadow: none;
+}
+
+ion-input::part(native) {
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #555555; /* Borde gris para el input */
+  font-size: 16px;
+  background-color: #333333; /* Fondo oscuro en el input */
+  color: #ffffff; /* Texto blanco en el input */
+  transition: border 0.3s ease;
+}
+
+ion-input::part(native):focus {
+  border-color: #009688; /* Borde verde cuando está enfocado */
+}
+
+/* Botón de la tarjeta */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+ion-button {
+  color: white;
+  border-radius: 50px;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 12px 20px;
+}
+
+
+/* Enlace de inicio de sesión */
+.login-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login-link a {
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

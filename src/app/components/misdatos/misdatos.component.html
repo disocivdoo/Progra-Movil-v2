@@ -1,0 +1,86 @@
+<ion-content class="ion-padding-horizontal page">
+  <!-- Imagen de la fachada -->
+  <img alt="DUOC" src="../../../assets/img/Fachada-Palacio-Íñiguez-e1578666996857.jpg" class="fullscreen-image" />
+
+  <ion-toolbar class="ion-padding-top">
+    <h1 class="ion-text-center" style="font-size: 24px; font-weight: bold;">
+      ¡Bienvenido(a) {{ user.firstName || 'Usuario' }} {{ user.lastName || '' }}!
+    </h1>
+  </ion-toolbar>
+
+  <!-- Input for user name -->
+  <ion-item>
+    <ion-input [(ngModel)]="user.userName" label="Cuenta" labelPlacement="floating" required></ion-input>
+  </ion-item>
+
+  <!-- Input for first name -->
+  <ion-item>
+    <ion-input [(ngModel)]="user.firstName" label="Nombre" labelPlacement="floating" required></ion-input>
+  </ion-item>
+
+  <!-- Input for last name -->
+  <ion-item>
+    <ion-input [(ngModel)]="user.lastName" label="Apellido" labelPlacement="floating" required></ion-input>
+  </ion-item>
+
+  <!-- Input for email -->
+  <ion-item>
+    <ion-input [(ngModel)]="user.email" label="Correo" labelPlacement="floating" type="email" required></ion-input>
+  </ion-item>
+
+  <!-- Input for secret question -->
+  <ion-item>
+    <ion-input [(ngModel)]="user.secretQuestion" label="Pregunta Secreta" labelPlacement="floating" required></ion-input>
+  </ion-item>
+
+  <!-- Input for secret answer -->
+  <ion-item>
+    <ion-input [(ngModel)]="user.secretAnswer" label="Respuesta Secreta" labelPlacement="floating" required></ion-input>
+  </ion-item>
+
+  <!-- Select input for education level -->
+  <ion-item>
+    <ion-label position="floating" class="font-size-16">Educación</ion-label>
+    <ion-select placeholder="Seleccione nivel" [(ngModel)]="user.educationalLevel.id" required>
+      <ion-select-option *ngFor="let nivelEducacional of listaNivelesEducacionales" [value]="nivelEducacional.id">
+        {{ nivelEducacional.name }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- Input for date of birth -->
+  <ion-item class="dark-theme">
+    <ion-label position="floating" class="font-size-16">Nacimiento</ion-label>
+    <ion-datetime [(ngModel)]="user.dateOfBirth" displayFormat="DD/MM/YYYY" placeholder="Seleccionar Fecha de Nacimiento" required></ion-datetime>
+  </ion-item>
+
+  <!-- Input for address -->
+  <ion-item>
+    <ion-input [(ngModel)]="user.address" label="Dirección" labelPlacement="floating" required></ion-input>
+  </ion-item>
+
+  <!-- Input for profile image -->
+  <ion-item>
+    <ion-label position="floating" class="font-size-16">Imagen de Perfil</ion-label>
+    <img [src]="user.image || '../../../assets/img/default-profile.jpg'" alt="Imagen de Perfil" style="width: 100px; height: 100px;"/>
+    <ion-input [(ngModel)]="user.image" label="URL de Imagen" labelPlacement="floating" required></ion-input>
+  </ion-item>
+
+  <!-- Input for password -->
+  <ion-item>
+    <ion-input [(ngModel)]="user.password" label="Contraseña" labelPlacement="floating" type="password" required></ion-input>
+  </ion-item>
+
+  <!-- Update button -->
+  <ion-button shape="round" class="Cerrar" expand="block" type="submit" (click)="actualizarDatos()" style="margin-top: 20px;" [disabled]="!isValidUser()">
+    Actualizar Datos
+  </ion-button>
+</ion-content>
+
+<!-- Footer with log-out button -->
+<ion-footer style="display: flex; justify-content: center; align-items: center; padding-bottom: 20px; padding-top: 20px;">
+  <ion-button shape="round" class="Cerrar" (click)="navegarSinDatos('/login')">
+    <ion-icon slot="start" name="log-out"></ion-icon>
+    Cerrar Sesión
+  </ion-button>
+</ion-footer>

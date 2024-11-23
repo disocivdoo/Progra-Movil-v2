@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="centered-container">
+    <ion-card class="card">
+      <ion-card-header>
+        <h1 class="card-title">Sistema de asistencia Duoc</h1>
+        <ion-card-title class="card-subtitle">Recuperar contraseña</ion-card-title>
+        <p class="card-step">Paso 1: Ingresa tu correo</p>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-input [(ngModel)]="usuario.email" label="Correo" labelPlacement="floating"
+            placeholder="Ingresa tu correo">
+          </ion-input>
+        </ion-item>
+
+        <div class="button-container">
+          <!-- Cambiado de Correo() a validarCorreo() -->
+          <ion-button shape="round" (click)="validarCorreo()" style="width: 100%;">
+            Recuperar contraseña
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="login-link">
+    <a href="/login">Iniciar sesión</a>
+  </div>
+</ion-content>

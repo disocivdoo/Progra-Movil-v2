@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar class="transparent-bg">
+    <div slot="start" class="ion-margin">
+      <app-language #selectLanguage></app-language>
+    </div>
+    <div class="show-in-landscape">
+      <h1 class="glow-text"> {{ 'AppName' | translate }} </h1>
+    </div>
+    <div slot="end" class="ion-margin">
+      <ion-button shape="round" size="small" (click)="navigateTheme()">
+        Tema
+        <ion-icon slot="start" name="color-wand-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Imagen de fondo y logo DUOC -->
+  <img alt="DUOC" src="../../../assets/img/Fachada-Palacio-Íñiguez-e1578666996857.jpg" class="fullscreen-image" />
+
+  <div class="center-container">
+    <div class="duoc-logo-container">
+      <img src="../../../assets/img/logo_duoc_white.png" class="duoc-logo" alt="Logo DUOC">
+    </div>
+
+    <!-- Tarjeta de inicio de sesión -->
+    <ion-card class="login-card">
+      <ion-card-content>
+        <ion-card-header>
+          <ion-toolbar>
+            <h1>{{ 'App.Title' | translate }}</h1>
+            <h2>{{ 'Login.Header' | translate }}</h2>
+          </ion-toolbar>
+        </ion-card-header>
+
+        <!-- Entrada de usuario y contraseña -->
+        <ion-item>
+          <ion-input [(ngModel)]="correo" label="{{ 'Login.Label.Email' | translate }}" labelPlacement="floating"
+            placeholder="{{ 'Login.Placeholder.Email' | translate }}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="password" label="{{ 'Login.Label.Password' | translate }}" labelPlacement="floating"
+            type="password" placeholder="{{ 'Login.Placeholder.Password' | translate }}"></ion-input>
+        </ion-item>
+
+        <!-- Botones de inicio de sesión y recuperación de contraseña -->
+        <div class="ion-margin-top">
+          <ion-button color="tertiary" shape="round" size="small" (click)="login()">
+            {{ 'Login.Button.Login' | translate }}
+          </ion-button>
+          <ion-button color="tertiary" shape="round" size="small" (click)="map()">
+            {{ 'Login.Button.map' | translate }}
+          </ion-button>
+          <div style="text-align: center; margin-top: 20px;">
+            <a href="correo()" (click)="passwordRecovery()" class="recover-password-link">{{ 'Login.Button.ForgotPassword' |
+              translate }}</a>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-button color="primary" shape="block" (click)="registerNewUser()">
+    {{ 'Login.Button.Signin' | translate }}
+  </ion-button>
+</ion-footer>

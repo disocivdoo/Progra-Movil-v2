@@ -1,0 +1,46 @@
+/* Estilos para el footer */
+ion-footer {
+  background-color: #ffffff; /* Fondo blanco */
+  border-top: 1px solid #e0e0e0; /* Línea superior sutil */
+  box-shadow: none; /* Sin sombra para un look más limpio */
+}
+
+/* Estilos para el toolbar */
+ion-toolbar {
+  padding: 10px 0; /* Espaciado en el toolbar */
+}
+
+/* Estilos para el ion-segment */
+ion-segment {
+  --background: transparent; /* Fondo transparente */
+  --border: none; /* Sin borde */
+  --box-shadow: none; /* Sin sombra en el segmento */
+}
+
+/* Estilos para los ion-segment-button */
+ion-segment-button {
+  --color-checked: #4a90e2; /* Color del texto e icono cuando está seleccionado */
+  --color: #4a4a4a; /* Color del texto e icono por defecto */
+  --background: transparent; /* Fondo transparente */
+  border: 1px solid transparent; /* Borde invisible por defecto */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  transition: background-color 0.3s ease, border 0.3s ease; /* Transiciones suaves */
+}
+
+ion-segment-button:hover {
+  background-color: rgba(74, 144, 226, 0.1); /* Color de fondo suave al pasar el mouse */
+  border: 1px solid #4a90e2; /* Borde visible al pasar el mouse */
+}
+
+/* Estilos para los iconos */
+ion-icon {
+  margin-bottom: 4px; /* Espaciado inferior para los iconos */
+  font-size: 20px; /* Tamaño del icono */
+}
+
+/* Estilos para el texto dentro de los botones */
+.custom-segment-button {
+  font-size: 14px; /* Tamaño de fuente */
+  text-align: center; /* Centrar el texto */
+}
